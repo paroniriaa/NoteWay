@@ -5,3 +5,27 @@
 .search-bar {
     margin-top: 50px;
 }
+
+.stream {
+    display: flex;
+    padding: 10px;
+}
+
+.note-item {
+    width: 8rem;
+    margin: 10px;
+}
+
+/* .circle {
+    margin-top: 10px;
+    width: 65px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #fff;
+    line-height: 5px;
+    text-align: center;
+    vertical-align: middle; 
+    display: table-cell;
+    background: #007bff;
+  } */
