@@ -24,7 +24,6 @@ Function 1 - Rating for Course Notes
 •	Who’s responsible: Junjie Zhu by Nov. 9
 
 
-
 Function 2 - Upload Notes
 
 #1 Go to the upload page (MUST-HAVE)
@@ -32,13 +31,10 @@ Function 2 - Upload Notes
 •	Acceptance test : User click on the ‘My Upload’ bar over the left side of his home page
 •	Who’s responsible: Junjie Zhu by Nov. 9
 
-
 #2 Upload note - I (MUST-HAVE)
 •	Description: Allow user to launch the upload function
 •	Acceptance test : User click on the ‘upload file’ bar on the section page
 •	Who’s responsible: Junjie Zhu by Nov. 9
-
-
 
 #3 Upload note - II (MUST-HAVE)
 •	Description: Allow user to begin/cancel uploading their notes
