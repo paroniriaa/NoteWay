@@ -7,7 +7,6 @@
 }
 
 #note-title-text {
-    /* text-align: center; */
     font-size: 2em;
 }
 
@@ -16,7 +15,6 @@
 }
 
 .rating-row {
-    /* display: inline-block; */
     text-align: center;
 }
 
