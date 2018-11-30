@@ -27,3 +27,11 @@ $(document).ready(function() {
         }); 
     });
 });
+
+$('select').on("change", function() {
+    var selected_class = $(this).val();
+    database.ref('class_mapping/' + $(this).val()).once('value').then(function(class_id_obj){
+        var class_id = class_id_obj.val();
+        window.location.href = "/section/?id=" + class_id;
+    });
+});
