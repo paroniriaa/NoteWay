@@ -4,6 +4,7 @@ var path    = require("path");
 
 app.use(express.static('public'))
 app.use('/section', express.static('public'));
+app.use('/note', express.static('public'))
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname+'/public/dashboard.html'));
@@ -11,11 +12,12 @@ app.get('/', function (req, res) {
 
 app.get('/upload-note', function(req, res) {
   res.sendFile(path.join(__dirname+'/public/upload-note.html'))
-})
+});
 
 app.get('/note', function(req, res) {
+  // console.log(req.params);
   res.sendFile(path.join(__dirname+'/public/note.html'))
-})
+});
 
 app.get('/section', function(req, res) {
     res.sendFile(path.join(__dirname+'/public/section.html'))

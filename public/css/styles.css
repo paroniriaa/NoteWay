@@ -51,6 +51,11 @@ body {
     margin: 10px;
 }
 
+th, td {
+    padding: 3px;
+    text-align: center;
+}
+  
 .circle {
     margin-top: 30px;
     border-radius: 50%;
