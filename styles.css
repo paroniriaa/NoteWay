@@ -1,9 +1,13 @@
+body {
+    padding-bottom: 50px;
+}
+
 #user-profile {
     color: white;
 }
 
 .row-margin {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 #note-title-text {

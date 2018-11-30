@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    notesRef = firebase.storage().ref();
+    storageRef = firebase.storage().ref();
+    notesRef = firebase.database().ref('notes');
 });
 
 $('#upload-file').change(function () {
@@ -14,9 +15,25 @@ $('#confirm-upload').click(function() {
     const name = (+new Date()) + '-' + file.name;
     const metadata = {contentType: file.type};
 
+    // TODO: Validate the class, professor, and section before proceeding
+
+    // Uploads note only if it is a PDF
     if (file.type == "application/pdf") {
-        const task = notesRef.child(name).put(file, metadata);
+        const task = storageRef.child(name).put(file, metadata);
         task.then(snapshot => snapshot.ref.getDownloadURL())
-            .then(url => console.log(url));
+            .then(function (url) {
+                console.log('Successfully uploaded file!');
+                console.log(url);
+
+                // Storing notes to database
+                notesRef.push({'country': country, 'capital_guess': capital_guess, 
+                               'capital_answer': capital_answer, 'isCorrect': correct});
+
+                // TODO: Need to send user to the view note page
+
+            });
+                // url => console.log(url));
+    } else {
+        console.log('Only accepts .pdf files!');
     }
 });

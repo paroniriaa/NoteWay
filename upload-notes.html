@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>NoteWay: Upload Notes</title>
+    <title>Upload Notes</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -33,11 +33,22 @@
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" id="upload-file">
                     <label class="custom-file-label" for="customFile">Choose file</label>
+                    <small id="fileHelp" class="form-text text-muted">Accepted file formats: .pdf</small>
                 </div>
             </div>
         </div>
 
         <form>
+            <div class="form-group row row-margin">
+                <div class="offset-md-4 col-md-1 pl-0">
+                    <label for="selectClass" class="col-sm-2 col-form-label">Name</label> 
+                </div>
+                
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="file-name" placeholder="Enter file name">
+                </div>
+            </div>
+
             <div class="form-group row row-margin">
                 <div class="offset-md-4 col-md-1 pl-0">
                     <label for="selectClass" class="col-sm-2 col-form-label">Class</label> 
@@ -64,6 +75,21 @@
                         <option value="cs188">Uichin Lee</option>
                         <option value="cs130">Miryung Kim</option>
                         <option value="cs181">Alexander Sherstov</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="offset-md-4 col-md-1 pl-0">
+                    <label for="selectSection" class="col-sm-2 col-form-label">Section</label> 
+                </div>
+                
+                <div class="col-md-3">
+                    <select class="custom-select">
+                        <option disabled selected value="">Select a section</option>
+                        <option value="sec-1a">Section 1A</option>
+                        <option value="sec-1b">Section 1B</option>
+                        <option value="sec-1c">Section 1C</option>
                     </select>
                 </div>
             </div>
