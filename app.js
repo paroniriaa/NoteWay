@@ -3,6 +3,7 @@ var app = express();
 var path    = require("path");
 
 app.use(express.static('public'))
+app.use('/section', express.static('public'));
 app.use('/note', express.static('public'))
 
 app.get('/', function (req, res) {
@@ -16,6 +17,10 @@ app.get('/upload-note', function(req, res) {
 app.get('/note', function(req, res) {
   // console.log(req.params);
   res.sendFile(path.join(__dirname+'/public/note.html'))
+});
+
+app.get('/section', function(req, res) {
+    res.sendFile(path.join(__dirname+'/public/section.html'))
 });
 
 app.listen(3000, function () {
