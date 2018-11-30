@@ -18,9 +18,11 @@ $(document).ready(function() {
                         }
                     }
                     else {
-                        var week = Object.keys(weeks)[0];
-                        var note = Object.values(weeks[week])[0];
-                        $('#class-' + subscription).append('<div class="note-item"><div class="card-body border border-dark"><h5 class="card-title">Week ' + week +  ' Notes</h5><a href="/note/?id=' + note + '" class="card-link">Note link</a></div></div>');                                             
+                        var weeks_nums = Object.keys(weeks);
+                        for (week of weeks_nums) {
+                            var note = Object.values(weeks[week])[0];
+                            $('#class-' + subscription).append('<div class="note-item"><div class="card-body border border-dark"><h5 class="card-title">Week ' + week +  ' Notes</h5><a href="/note/?id=' + note + '" class="card-link">Note link</a></div></div>');                                             
+                        }
                     }
                 });            
             });
