@@ -55,3 +55,34 @@ th, td {
     padding: 3px;
     text-align: center;
 }
+  
+.circle {
+    margin-top: 30px;
+    border-radius: 50%;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    background: #007bff;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+i {
+    color: white;
+}
+
+.add {
+    background-color: orange;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+.add:hover {
+    opacity: 1;
+    transform: scale(1.5, 1.5);
+}
