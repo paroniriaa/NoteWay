@@ -37,6 +37,19 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Alert div that will show if one of the fields are wrong -->
+        <div class="row align-items-center row-margin" style="display:none" id="alert-div">
+            <div class="offset-md-4 col-md-4">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Please fix the following errors:</strong>
+                    <p id="error-msg"></p>
+                    <button type="button" id="alert-button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
 
         <form>
             <div class="form-group row row-margin">
@@ -44,8 +57,9 @@
                     <label for="selectClass" class="col-sm-2 col-form-label">Name</label> 
                 </div>
                 
+                <!-- Note name -->
                 <div class="col-md-3">
-                    <input type="text" class="form-control" id="file-name" placeholder="Enter file name">
+                    <input type="text" class="form-control" id="note-name" placeholder="Enter note name">
                 </div>
             </div>
 
@@ -55,41 +69,57 @@
                 </div>
                 
                 <div class="col-md-3">
-                    <select class="custom-select">
+                    <select id="class-select" class="custom-select">
                         <option disabled selected value="">Select a class</option>
-                        <option value="cs188">CS 188</option>
-                        <option value="cs130">CS 130</option>
-                        <option value="cs181">CS 181</option>
+                        <option value="CS 31">CS 31</option>
+                        <option value="CS 32">CS 32</option>
+                        <option value="CS 33">CS 33</option>
+                        <option value="CS M51A">CS M51A</option>
+                        <option value="CS 111">CS 111</option>
+                        <option value="CS 130">CS 130</option>
+                        <option value="CS 143">CS 143</option>
+                        <option value="CS 144">CS 144</option>
+                        <option value="CS M146">CS M146</option>
+                        <option value="CS M151B">CS M151B</option>
+                        <option value="CS 181">CS 181</option>
+                        <option value="CS 188">CS 188</option>
                     </select>
                 </div>
             </div>
 
-            <div class="form-group row">
+            <!-- <div class="form-group row">
                 <div class="offset-md-4 col-md-1 pl-0">
                     <label for="selectProfessor" class="col-sm-2 col-form-label">Professor</label> 
                 </div>
                 
                 <div class="col-md-3">
-                    <select class="custom-select">
+                    <select id="professor-select" class="custom-select">
                         <option disabled selected value="">Select a professor</option>
-                        <option value="cs188">Uichin Lee</option>
+                        <option value="">Uichin Lee</option>
                         <option value="cs130">Miryung Kim</option>
                         <option value="cs181">Alexander Sherstov</option>
                     </select>
                 </div>
-            </div>
+            </div> -->
 
             <div class="form-group row">
                 <div class="offset-md-4 col-md-1 pl-0">
-                    <label for="selectSection" class="col-sm-2 col-form-label">Section</label> 
+                    <label for="selectWeek" class="col-sm-2 col-form-label">Week</label> 
                 </div>
                 
                 <div class="col-md-3">
-                    <select class="custom-select">
-                        <option disabled selected value="">Select a section</option>
-                        <option value="sec-1a">Section 1A</option>
-                        <option value="sec-1b">Section 1B</option>
-                        <option value="sec-1c">Section 1C</option>
+                    <select id="week-select" class="custom-select">
+                        <option disabled selected value="">Select a week</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
                     </select>
                 </div>
             </div>
@@ -105,7 +135,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="firebase-connection.js"></script>
-    <script src="js/upload-notes.js"></script>
+    <script src="js/firebase-connection.js"></script>
+    <script src="js/upload-note.js"></script>
   </body>
 </html>
