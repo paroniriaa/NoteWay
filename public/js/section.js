@@ -24,13 +24,15 @@ $(document).ready(function() {
                 }
             }
             else {
-                var week = Object.keys(weeks)[0];
-                var notes = Object.values(weeks[week]);
-                for (var note of notes) {
-                    await database.ref('notes/' + note).once('value').then(function(note_obj){
-                        var note_json = note_obj.val();
-                        $('#card-' + week).append('<div class="note-item"><div class="card-body border border-dark"><h5 class="card-title">' + note_json['note_name'] +  ' Notes</h5><a href="/note/?id=' + note + '" class="card-link">Note link</a></div></div>');
-                    });
+                var weeks_nums = Object.keys(weeks);
+                for (week of weeks_nums) {
+                    var notes = Object.values(weeks[week]);
+                    for (var note of notes) {
+                        await database.ref('notes/' + note).once('value').then(function(note_obj){
+                            var note_json = note_obj.val();
+                            $('#card-' + week).append('<div class="note-item"><div class="card-body border border-dark"><h5 class="card-title">' + note_json['note_name'] +  ' Notes</h5><a href="/note/?id=' + note + '" class="card-link">Note link</a></div></div>');
+                        });
+                    }
                 }
             }
         });          
