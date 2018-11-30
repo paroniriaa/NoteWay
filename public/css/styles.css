@@ -1,0 +1,52 @@
+body {
+    padding-bottom: 50px;
+}
+
+#user-profile {
+    color: white;
+}
+
+.row-margin {
+    margin-top: 20px;
+}
+
+#note-title-text {
+    font-size: 2em;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+#pdf-object {
+    width: 100%;
+    height: 800px;
+}
+
+#upload-file {
+    text-align: center;
+    margin: auto;
+}
+
+.rating-row {
+    text-align: center;
+}
+
+.checked {
+    color: orange;
+}
+
+.search-bar {
+    margin-top: 50px;
+}
+
+.stream {
+    display: flex;
+    padding: 10px;
+}
+
+.note-item {
+    width: 8rem;
+    margin: 10px;
+}
