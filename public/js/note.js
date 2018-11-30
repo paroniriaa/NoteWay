@@ -14,7 +14,7 @@ function display_note_information(note_id) {
     database.ref('notes/' + note_id).once('value').then(function(snapshot) {
         var note_info = snapshot.val();
 
-        var note_name = '<div id="note-title-text" class="offset-md-3 col-md-6 center">';
+        var note_name = '<div id="note-title-text" class="offset-md-2 col-md-8 center">';
         note_name += '<strong>' + note_info['note_name'] + '</strong></div>';
 
         // Get class from id_mapping
