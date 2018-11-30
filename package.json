@@ -1,0 +1,22 @@
+{
+  "name": "noteway",
+  "version": "1.0.0",
+  "description": "Project for CS188",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asripathy/NoteWay.git"
+  },
+  "author": "Aravind",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asripathy/NoteWay/issues"
+  },
+  "homepage": "https://github.com/asripathy/NoteWay#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
