@@ -1,10 +1,6 @@
 $(document).ready(function() {
     storageRef = firebase.storage().ref();
-    // notesRef = firebase.database().ref('notes');
     database = firebase.database();
-
-    // database.ref('note_count').set(1);
-    // database.ref('notes/' + 1).set({'file name': 'fried rice', 'title': 'suk me'});
 });
 
 $('#upload-file').change(function () {
@@ -28,7 +24,6 @@ $('#confirm-upload').click(function() {
 
     const note_name = $('#note-name').val();
     const class_name = $('#class-select').val();
-    // const professor = $('#professor-select option:selected').text();
     const week = $('#week-select').val();
 
     var error_messages = [];
@@ -39,10 +34,6 @@ $('#confirm-upload').click(function() {
     if (!class_name) {
         error_messages.push("Please input a class.");
     }
-
-    // if (!$('#professor-select').val()) {
-    //     error_messages.push("Please input a professor.");
-    // }
 
     if (!week) {
         error_messages.push("Please input a week.");
@@ -67,17 +58,15 @@ $('#confirm-upload').click(function() {
             database.ref('class_mapping/' + class_name).once('value').then(function(id) {
                 var class_id = id.val();
 
-                note_obj = {'pdf': file.name, 'note_name': note_name, 'class_id': class_id, 'week': week};
+                note_obj = {'pdf': note_id + '.pdf', 'note_name': note_name, 'class_id': class_id, 'week': week};
                 database.ref('notes/' + note_id).set(note_obj);
                 database.ref('classes/' + class_id + '/' + week).push(note_id);
 
-                // console.log('Successfully added note information to database!');
-
                 // Upload note to storage
-                // console.log('Now uploading file to storage...');
                 const task = storageRef.child(note_id+'.pdf').put(file, metadata);
                 task.then(snapshot => snapshot.ref.getDownloadURL()).then(function(url) {
-                    // console.log('Successfully uploaded file');
+                    // Redirect to note page
+                    window.location.href = '/note?id=' + note_id;
                 });
             });
         });

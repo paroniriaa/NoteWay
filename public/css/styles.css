@@ -50,3 +50,8 @@ body {
     width: 8rem;
     margin: 10px;
 }
+
+th, td {
+    padding: 3px;
+    text-align: center;
+}
