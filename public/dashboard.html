@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">NoteWay</a>
+        <div class="navbar-nav align-items-end">
+            <a class="nav-link" href="#">
+                <i id="user-profile" class="fas fa-user-circle fa-2x"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="input-group mb-3 search-bar">
+                <select id="class-search" class="custom-select">
+                    <option disabled selected value="">Search for a class</option>
+                    <option value="CS 31">CS 31</option>
+                    <option value="CS 32">CS 32</option>
+                    <option value="CS 33">CS 33</option>
+                    <option value="CS M51A">CS M51A</option>
+                    <option value="CS 111">CS 111</option>
+                    <option value="CS 130">CS 130</option>
+                    <option value="CS 143">CS 143</option>
+                    <option value="CS 144">CS 144</option>
+                    <option value="CS M146">CS M146</option>
+                    <option value="CS M151B">CS M151B</option>
+                    <option value="CS 181">CS 181</option>
+                    <option value="CS 188">CS 188</option>
+                </select>
+            </div>
+        </div> 
+        <div id="dashboard" class="col-md-8 offset-md-2"></div>  
+        <div class="circle add"> <a href="upload-note"><i class="fas fa-upload" ></i></a> </div> 
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>      
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/firebase-connection.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
