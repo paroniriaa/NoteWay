@@ -58,7 +58,7 @@ $('#confirm-upload').click(function() {
             database.ref('class_mapping/' + class_name).once('value').then(function(id) {
                 var class_id = id.val();
 
-                note_obj = {'pdf': note_id + '.pdf', 'note_name': note_name, 'class_id': class_id, 'week': week};
+                note_obj = {'clarity':0,'content_richness':0,'helpfulness':0,'overall':0,'times':0,'typesetting':0,'pdf': note_id + '.pdf', 'note_name': note_name, 'class_id': class_id, 'week': week};
                 database.ref('notes/' + note_id).set(note_obj);
                 database.ref('classes/' + class_id + '/' + week).push(note_id);
 
